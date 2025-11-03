@@ -1,0 +1,148 @@
+/* ==================== COLORS ==================== */
+:root {
+  --bg: linear-gradient(135deg, #f9f9f9, #e6e6e6);
+  --text: #222;
+  --card: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+body.dark {
+  --bg: linear-gradient(135deg, #0f0f0f, #1e1e1e);
+  --text: #eaeaea;
+  --card: #1f1f1f;
+  --shadow: rgba(255, 255, 255, 0.05);
+}
+
+/* ==================== LAYOUT ==================== */
+body {
+  font-family: Poppins, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.container {
+  background: var(--card);
+  padding: 25px;
+  border-radius: 16px;
+  width: 400px;
+  box-shadow: 0 4px 12px var(--shadow);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ==================== HEADER ==================== */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#theme-toggle {
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: var(--text);
+}
+
+/* ==================== SUMMARY ==================== */
+.summary {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.income p {
+  color: limegreen;
+}
+
+.expense p {
+  color: crimson;
+}
+
+/* ==================== LIST ==================== */
+.list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 8px 0;
+  border-left: 6px solid;
+  border-radius: 8px;
+  background: rgba(240, 240, 240, 0.6);
+  transition: background 0.3s ease;
+}
+
+body.dark .list li {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.list li.plus {
+  border-color: limegreen;
+}
+
+.list li.minus {
+  border-color: crimson;
+}
+
+/* ==================== FORM ==================== */
+form input,
+form select,
+form button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  background: var(--card);
+  color: var(--text);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+form button {
+  background: dodgerblue;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+form button:hover {
+  opacity: 0.9;
+}
+
+/* ==================== EXPORT ==================== */
+button.export {
+  width: 100%;
+  margin-top: 15px;
+  padding: 10px;
+  border: none;
+  background: mediumseagreen;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button.export:hover {
+  opacity: 0.9;
+}
+
+/* ==================== FILTER ==================== */
+.filters {
+  margin-bottom: 10px;
+  text-align: center;
+}
